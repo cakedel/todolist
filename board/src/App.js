@@ -1,10 +1,10 @@
 import React from "react";
 import { useState, useRef, useEffect } from "react";
-import Write from "../src/components/Write";
-import List from "../src/components/List";
-import View from "../src/components/View";
+import Write from "./board/Write";
+import List from "./board/List";
+import View from "./board/View";
 import { Link, Routes, Route, NavLink } from "react-router-dom";
-import Modify from "../src/components/Modify";
+import Modify from "./board/Modify";
 
 const App = () => {
   const id = useRef(1);
