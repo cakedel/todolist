@@ -13,7 +13,6 @@ const List = ({ list }) => {
             </li>
           );
         })}
-        <button onClick={() => console.log(list[id].id)}>list</button>
       </ul>
     </div>
   );

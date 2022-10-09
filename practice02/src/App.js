@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import List from "./components/List";
+import Modify from "./components/Modify";
 import View from "./components/View";
 import Write from "./components/Write";
 
@@ -28,10 +29,22 @@ function App() {
       </ul>
       <Routes>
         <Route path="/" />
-        <Route path="/board" element={<List list={list}/>} />
+        <Route path="/board" element={<List list={list} />} />
         <Route
           path="/view/:id"
           element={<View list={list} setList={setList} />}
+        />
+        <Route
+          path="/modify/:id"
+          element={
+            <Modify
+              input={input}
+              setInput={setInput}
+              list={list}
+              setList={setList}
+              num={num}
+            />
+          }
         />
         <Route
           path="/write"
